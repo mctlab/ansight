@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AnSight.iml" filepath="$PROJECT_DIR$/AnSight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ActionBarSherlock/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/../ActionBarSherlock/actionbarsherlock/actionbarsherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SlidingMenu/library/library.iml" filepath="$PROJECT_DIR$/../SlidingMenu/library/library.iml" />
     </modules>
   </component>
 </project>
