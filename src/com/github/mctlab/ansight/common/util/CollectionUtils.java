@@ -64,7 +64,7 @@ public class CollectionUtils {
     }
 
     public static int[] splitToInt(String s, String split) {
-        if (StringUtils.isBlank(s)) {
+        if (AsStringUtils.isBlank(s)) {
             return AsEmptyConst.EMPTY_INT_ARRAY;
         }
         String[] ss = s.split(split);
@@ -187,7 +187,7 @@ public class CollectionUtils {
     private static final Reducer<Integer, String> INT_ARRAY_TO_STRING = new Reducer<Integer, String>() {
         @Override
         public String reduce(String previousValue, Integer currentValue, int index, Integer[] array) {
-            if (StringUtils.isBlank(previousValue)) {
+            if (AsStringUtils.isBlank(previousValue)) {
                 if (index == array.length - 1) {
                     return "[" + currentValue + "]";
                 } else {
@@ -231,7 +231,7 @@ public class CollectionUtils {
 
         @Override
         public String reduce(String previousValue, T currentValue, int index, T[] array) {
-            if (StringUtils.isBlank(previousValue)) {
+            if (AsStringUtils.isBlank(previousValue)) {
                 return currentValue.toString();
             } else {
                 return previousValue + separator + currentValue;

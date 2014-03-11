@@ -10,7 +10,7 @@ import com.github.mctlab.ansight.common.network.form.IForm;
 import com.github.mctlab.ansight.common.util.ExceptionUtils;
 import com.github.mctlab.ansight.common.util.HttpUtils;
 import com.github.mctlab.ansight.common.util.L;
-import com.github.mctlab.ansight.common.util.StringUtils;
+import com.github.mctlab.ansight.common.util.AsStringUtils;
 import org.apache.http.*;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.message.BasicHttpResponse;
@@ -137,14 +137,14 @@ public abstract class AbsHttpTask<Result> implements HttpTask<Result> {
 
     private InputStream loadUrlFromResource(String path) {
         L.i(this, path);
-        if (StringUtils.isBlank(path)) {
+        if (AsStringUtils.isBlank(path)) {
             return null;
         }
         String fileName = path.replaceAll("/", ".");
         if (fileName.startsWith(".")) {
             fileName = fileName.substring(1);
         }
-        if (StringUtils.isBlank(fileName)) {
+        if (AsStringUtils.isBlank(fileName)) {
             return null;
         }
         AsApplication app = AsApplication.getInstance();

@@ -13,7 +13,7 @@ public class NumberUtils {
     }
 
     public static long toLong(String str, int defaultValue) {
-        if (StringUtils.isBlank(str)) {
+        if (AsStringUtils.isBlank(str)) {
             return defaultValue;
         }
         try {
@@ -28,7 +28,7 @@ public class NumberUtils {
     }
 
     public static int toInt(String str, int defaultValue) {
-        if (StringUtils.isBlank(str)) {
+        if (AsStringUtils.isBlank(str)) {
             return defaultValue;
         }
         try {
@@ -43,7 +43,7 @@ public class NumberUtils {
     }
 
     public static float toFloat(String str, float defaultValue) {
-        if (StringUtils.isBlank(str)) {
+        if (AsStringUtils.isBlank(str)) {
             return defaultValue;
         }
         try {

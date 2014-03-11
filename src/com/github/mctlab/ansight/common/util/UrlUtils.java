@@ -130,7 +130,7 @@ public class UrlUtils {
     }
 
     public static String mergeBaseAndQuery(String base, String query) {
-        if (StringUtils.isBlank(query)) {
+        if (AsStringUtils.isBlank(query)) {
             return base;
         }
         return base + "?" + query;
@@ -156,7 +156,7 @@ public class UrlUtils {
 
     public static List<NameValuePair> queryToPairs(String query) {
         List<NameValuePair> list = new ArrayList<NameValuePair>();
-        if (!StringUtils.isBlank(query)) {
+        if (!AsStringUtils.isBlank(query)) {
             String[] ss = query.split("&");
             for (String s : ss) {
                 String[] strPair = s.split("=");
